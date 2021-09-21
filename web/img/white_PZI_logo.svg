@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="187.21013"
+   height="106.30025"
+   id="svg3014"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="white_PZI_logo.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview9"
+     showgrid="false"
+     inkscape:zoom="2.1473197"
+     inkscape:cx="93.605064"
+     inkscape:cy="53.150124"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg3014" />
+  <defs
+     id="defs3016" />
+  <metadata
+     id="metadata3019">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-186.39494,-464.92634)"
+     id="layer1"
+     style="fill:#ffffff">
+    <g
+       transform="matrix(0.125,0,0,-0.125,19.707438,571.22659)"
+       id="g12"
+       style="fill:#ffffff">
+      <path
+         d="m 1980.79,0 850.391,0 0,850.402 -850.391,0 0,-850.402 z"
+         id="path14"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+      <path
+         d="m 1611,323.332 c -37.49,0 -127.5,0 -127.5,0 l 0,98.328 c 0,0 95,0 127.5,0 32.5,0 47.51,-28.32 47.51,-49.16 0,-20.84 -15.11,-49.168 -47.51,-49.168 z m 63.34,188.328 c -33.33,0 -340.84,0 -340.84,0 l 0,-434.1717 150,0 0,162.1527 c 0,0 128.34,0 190.84,0 51.67,0 126.67,39.32 126.67,136.191 0,107.508 -70,135.828 -126.67,135.828"
+         id="path16"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    </g>
+  </g>
+</svg>

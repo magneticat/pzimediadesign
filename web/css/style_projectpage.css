@@ -1,0 +1,343 @@
+html, body{
+  padding: 0;
+  margin: 0;
+  -webkit-overflow-scrolling : touch;
+  background-color: black;
+  color: white;
+}
+
+h2 {
+  line-height: 22px;
+  font-size: 16px;
+  font-family: "inconsolata", monospace;
+  font-weight: normal;
+  margin: 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+figcaption {
+  padding-left: 10px;
+}
+
+#creator {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.zwartArea{
+  background-color: black;
+  width: 80%;
+  float: right;
+  position:relative;
+  height: 100%;
+  display: table;
+}
+
+.zwartAreaText{
+  color: white;
+}
+
+.zwartAreaFull{
+  margin:0;
+  margin-left: 10%;
+  margin-bottom: 10%;
+  padding: 0;
+  overflow: hidden;
+  width: 80%;
+  background-color: black;
+}
+
+.zwartAreaFull p, h1{
+  padding: 15px;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 1.3;
+  color: white;
+}
+
+.colophon, .highlight{
+  color: white;
+}
+
+.sidebarBorder {
+  border-right: 3px solid white;
+}
+
+#sideBarDescInfo{
+  border-bottom: 3px solid white;
+  padding: 10px;
+}
+
+#sideBarDescInfo p{
+  display: initial;
+}
+
+.hightlightSidebar {
+   word-wrap: break-word;
+}
+
+#sideBarDescInner p{
+  border-bottom: 3px double white;
+}
+
+#bio p {
+  border: 0;
+  padding: 0;
+}
+
+#bio {
+  line-height: 22px;
+  font-size: 16px;
+  font-family: "inconsolata", monospace;
+  padding: 10px;
+  border-bottom: 3px double white;
+}
+
+#title  {
+  padding-top: 0 !important;
+}
+
+#sideBarDescInner a,
+#sideBarDescInner a:active,
+#sideBarDescInner a:visited,
+#sideBarDescInner a:hover{
+  color: white;
+  text-decoration: none;
+  border: 0;
+}
+
+#sideBarDescInfo img {
+  width: 25px;
+  display: initial !important; 
+}
+
+#sidebarInner{
+  display: block;
+}
+
+#sidebarInner *{
+  display: block;
+}
+
+.hoverBackA {
+  display: initial !important; 
+}
+
+.hoverBackB {
+  display: none; 
+}
+
+#sidebar {
+  background-color: black;   
+}
+
+.sidebarBorderLeft {
+  border-left: 3px solid white;
+}
+
+#sideBarDescInfo a,
+#sideBarDescInfo a:hover,
+#sideBarDescInfo a:active,
+#sideBarDescInfo a:visited{
+  color: white;
+  text-decoration: none;
+}
+
+.sidebarMobile {
+  border: 0;
+}
+
+#filter{
+  border-bottom: 3px solid white;
+  background-color: black;
+  color: white;
+}
+
+#filter a {
+  color: white;
+  text-decoration: none;
+}
+
+.project {
+    width: 60%;
+    margin-top: 50px;
+}
+
+.project p {
+  line-height: 1.3;
+  font-size: 25px;
+  padding: 10px;
+  font-family: 'texgyreheroscnbold';
+}
+
+.project p a {
+  color: white;
+  border-bottom: 3px double white;
+  text-decoration: none;
+}
+
+.project img {
+  padding: 10px;
+  max-width: 600px;
+  max-height: 600px;
+  display:block;
+}
+
+.project h1,
+.project h2,
+.project h3 {
+  font-family: 'texgyreheroscnbold';
+
+}
+
+.project h1 {
+  font-size: 25px;
+  padding-left: 10px;
+  text-indent: 50px;
+}
+
+.project h2 {
+  font-size: 23px;
+  padding-left: 10px;
+  text-indent: 50px;
+}
+
+.project h3 {
+  font-size: 21px;
+  padding-left: 10px;
+  text-indent: 50px;
+}
+
+#thumnail {
+  display: none;
+}
+
+iframe {
+  border: none;
+}
+
+@media only screen and (max-width:1600px){
+
+  .project {
+      width: 70%;
+      margin-top: 45px;
+  }
+
+  .project p {
+    font-size: 20px;
+  }
+
+  #creator {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  #sideBarDescInner p, #sideBarDescInner h2 {
+      margin-bottom: 5px;
+      padding-bottom: 5px;
+      line-height: 18px;
+      font-size: 15px;
+      font-family: "inconsolata", monospace;
+      border-bottom: 3px double white;
+    }
+
+  #sideBarDescInfo img {
+      width: 20px;
+      display: initial !important; 
+    }
+
+  #bio p {
+    border: 0;
+    padding: 0;
+  }
+
+}
+
+@media only screen and (max-width:1280px){
+  .project {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 768px){ 
+
+  #sideBarDescInner p {
+    border-bottom: 0;
+  }
+
+  #sideBarDescInner p:first-of-type {
+    border-bottom: 3px double white;
+  }
+
+  #sideBarDescInner {
+    border-bottom: 3px solid white;
+  }
+
+  #sideBarDescInfo p {
+    padding: 0;
+  }
+
+  .project {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .project#extra {
+     padding-left: 30px !important;
+
+  }
+
+  .project img figure {
+    max-width: 100%;
+    padding: 10px 0 10px 0;
+  }
+
+  
+  iframe {
+    border: none;
+    max-width: 100%;
+    padding: 10px 0 10px 0;
+  }
+
+  .sidebarBorderLeft {
+    border-left: 0;
+  }
+
+  .sidebarMobile{
+      -webkit-box-shadow: inset 0px -3px 0px 0px white;
+         -moz-box-shadow: inset 0px -3px 0px 0px white;
+              box-shadow: inset 0px -3px 0px 0px white;
+  }
+
+  .hoverBackA {
+    display: none !important; 
+  }
+
+  .hoverBackB {
+    display: initial !important; 
+  }
+
+  #filter img {
+    width: 20px;
+    display: initial !important;
+  }
+
+  #filter p {
+    display: initial !important;
+  }
+}
+
+
+@media only screen and (min-width:0px) and (max-width:459px){
+
+  #filter img {
+    width: 16px;
+    display: initial !important;
+  }
+
+}

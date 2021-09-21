@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'inconsolata',
+    src: url(Inconsolata-Regular.ttf)
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'inconsolata',
+    src: url(Inconsolata-Bold.ttf)
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'vollkorn',
+    src: url(Vollkorn-Regular.ttf)
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'vollkorn',
+    src: url(Vollkorn-Bold.ttf)
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'vollkorn',
+    src: url(Vollkorn-Italic.ttf)
+    font-weight: regular;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'vollkorn',
+    src: url(Vollkorn-BoldItalic.ttf)
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
+
+@font-face {
+    font-family: 'texgyreheroscnbold';
+    src: url('texgyreheroscn-bold-webfont.eot');
+    src: url('texgyreheroscn-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('texgyreheroscn-bold-webfont.woff') format('woff'),
+         url('texgyreheroscn-bold-webfont.ttf') format('truetype'),
+         url('texgyreheroscn-bold-webfont.svg#texgyreheroscnbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'texgyreheroscnregular';
+    src: url('texgyreheroscn-regular-webfont.eot');
+    src: url('texgyreheroscn-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('texgyreheroscn-regular-webfont.woff') format('woff'),
+         url('texgyreheroscn-regular-webfont.ttf') format('truetype'),
+         url('texgyreheroscn-regular-webfont.svg#texgyreheroscnregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
