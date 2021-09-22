@@ -1,4 +1,5 @@
 # MMD&C Graduation Website CMS: from Mediawiki to HTML
+Code "inherited" from Javi and acastro at https://git.xpub.nl/acastro/pzimediadesign
 
 ## Depencies
 * python **2.7**
@@ -14,7 +15,9 @@ Or index all the gaduation works:
 
 
 ## To Do
-
+- Do NOT use for autodeployment just yet. Several students have deleted their Wikipedia project pages or parts of them. Also, some older years fail to build.
+- Reintroduce the argument for processing only one year
+- Port to Python 3.x
 
 
 

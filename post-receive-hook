@@ -1,0 +1,12 @@
+#!/bin/sh
+
+git_work_tree_path=/var/www/mmdc-site
+GIT_WORK_TREE=$git_work_tree_path git checkout -f
+
+commitname=`git log -n 1 --pretty=format:%cn`
+commitdate=`git log -n 1 --pretty=format:%cd`
+
+# runs script that converts md to website
+# We cannot do it now because several students deleted their Wiki entries or part of them
+# Additionally, some older years are not building properly (probably because of the above)
+# python $git_work_tree_path/mmdc_wiki2web.py

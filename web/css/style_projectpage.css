@@ -148,6 +148,11 @@ figcaption {
   text-decoration: none;
 }
 
+#sideBarScroll {
+  overflow: scroll;
+  height: 100vh;
+}
+
 .sidebarMobile {
   border: 0;
 }
@@ -265,6 +270,14 @@ iframe {
 }
 
 @media only screen and (max-width: 768px){ 
+
+  /* for mobile... */
+  .project img {
+      padding: 10px;
+      max-width: 100%;
+      max-height: 600px;
+      display: block;
+  }
 
   #sideBarDescInner p {
     border-bottom: 0;
