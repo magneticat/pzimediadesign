@@ -49,8 +49,7 @@ def create_pages(memberpages, mode):
         # import pdb; pdb.set_trace()
         articledict = parse_work(site, member, page_text) # create dictionary
         # Title, Creator, Date, Website, Thumbnail, Bio, Description, Extra
-        if len(articledict['Creator'])>0 and len(articledict['Title'])>0  and len(articledict['Thumbnail'])>0:
-
+        if len(articledict['Date'])>0 and len(articledict['Creator'])>0 and len(articledict['Title'])>0  and len(articledict['Thumbnail'])>0:
             for key in articledict.keys():
                 print key
 
@@ -67,13 +66,15 @@ def create_pages(memberpages, mode):
                     articledict[key] = replace_video(articledict['Extra'])  
 #                    found = re.findall(vimeo_exp, articledict['Extra'])
 #                    print 'FOUND:', found
-                     
-
             pprint.pprint( articledict)
-          
             articledict['Imgs'] = mw_page_imgsurl(site, page, articledict['Thumbnail'] )
-            
+        # else and skipping is needed, otherwise you execute all the rest, including pages that are not supposed to be included
+        else:
+            continue
+
+
         year = articledict['Date']
+        print articledict
         page_template = open("./work-{}-template.html".format(year), "r") # a template for each year            
         page_tree = html5lib.parse(page_template, namespaceHTMLElements=False)
         page_title = page_tree.find('.//title')
@@ -182,7 +183,7 @@ if user_args.preview:
     memberpages=[unicode(user_args.preview)]
 else:    
     memberpages=mw_cats(site, user_args)
-#    print '\n\nmemberpages:\n\n', memberpages, '\n\n********\n\n' # memberpages include years, from current to 2015
+    #print '\n\nmemberpages:\n\n', memberpages, '\n\n********\n\n' # memberpages include years, from current to 2015
 
     indexdict = create_pages(memberpages, 'index')
     indexdict_byyear={year:{} for year in years } # index of all page organized according to year
@@ -193,8 +194,8 @@ else:
     for key in indexdict.keys(): # populate indexdict_byyear with works
         indexdict_byyear[ int(indexdict[key]['Date'])][key] = indexdict[key]
 
-    #print '\n\n******* indexdict_byyear ***********\n\n'
-    #pprint.pprint( indexdict_byyear )    
+    print '\n\n******* indexdict_byyear ***********\n\n'
+    pprint.pprint( indexdict_byyear )    
 
     for year in indexdict_byyear.keys(): # create index page for each year ie 2016.html
         print '\n***** ', year, ' *****\n'

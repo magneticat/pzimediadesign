@@ -10,8 +10,7 @@ from datetime import datetime
 ######
 
 
-years = range(2015, (datetime.now()).year + 1)
-
+years = range(2015, (datetime.now()).year+1)
 
 #########
 # Site Level
@@ -29,7 +28,7 @@ def mw_cats(site, args): #returns pages member of args(categories)
     for category in years:#args.category:
         #print 'cat:', category    
         cat = site.Categories[category]#, 'Graduation_work']
-        #print 'site cats:', cat, type(cat.members())  
+        print 'site cats:', cat, type(cat.members())  
         for i in list(cat.members()):# add members(objects) of cat as list, to pages list
             pages.append(i)
         #print 'pages:', pages
