@@ -120,9 +120,6 @@ figcaption {
   display: block;
 }
 
-#sidebarInner *{
-  display: block;
-}
 
 .hoverBackA {
   display: initial !important; 

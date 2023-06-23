@@ -186,7 +186,14 @@ $( window ).resize(function() {
 })
 
 
-$('html, body').animate({
-    scrollTop: $("div.isotope").offset().top
-}, 2000);
+
+var page = $("html, body");
+
+   page.on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function(){
+       page.stop();
+   });
+
+   page.animate({ scrollTop: $("div.isotope").offset().top }, 'slow', function(){
+       page.off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
+   });
 

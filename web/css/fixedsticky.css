@@ -20,3 +20,14 @@
 .fixedsticky-on + .fixedsticky-dummy {
   display: block;
 }
+.fixedstickyTitle {
+	float:left;
+	width:90%;
+}
+.fixedstickyClose {
+	float:right;
+}
+.fixedstickyClose a {
+	display:block;
+	width:100%;
+}
