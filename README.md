@@ -2,7 +2,7 @@
 Code "inherited" from Javi and acastro at https://git.xpub.nl/acastro/pzimediadesign
 
 ## Depencies
-* python **3.5**
+* python **3.5+**
 * Pandoc
 * Python libraries: html5lib,  mwclient, 
 
