@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import pprint, re, subprocess, shlex, urllib
+import pprint, re, subprocess, shlex, urllib.request, urllib.parse, urllib.error
 import xml.etree.ElementTree as ET
 from mwclient import Site
 from datetime import datetime
@@ -10,13 +10,13 @@ from datetime import datetime
 ######
 
 
-years = range(2015, (datetime.now()).year+1)
+years = list(range(2015, (datetime.now()).year+1))
 
 #########
 # Site Level
 #########
 def mwsite(host, path): #returns wiki site object
-    site = Site(('http',host), path)
+    site = Site(host, path)
     return site
 
             
@@ -28,7 +28,7 @@ def mw_cats(site, args): #returns pages member of args(categories)
     for category in years:#args.category:
         #print 'cat:', category    
         cat = site.Categories[category]#, 'Graduation_work']
-        print 'site cats:', cat, type(cat.members())  
+        print('site cats:', cat, type(cat.members()))  
         for i in list(cat.members()):# add members(objects) of cat as list, to pages list
             pages.append(i)
         #print 'pages:', pages
@@ -59,7 +59,7 @@ def mw_page_text(site, page):
 
 def mw_page_cats(site, page):
     cats_list = list(page.categories())
-    cats = [cat.name for cat in cats_list if cat.name != u'Category:04 Publish Me'] 
+    cats = [cat.name for cat in cats_list if cat.name != 'Category:04 Publish Me'] 
     return cats
 
 
@@ -70,7 +70,7 @@ def mw_page_imgsurl(site, page, thumb):
     imgs = page.images()
     imgs = list(imgs)    
     imgs_dict = { img.name:(img.imageinfo)['url'] for img in imgs if  (img.imageinfo)['url'] != thumb } # exclude thumb 
-    imgs_dict = { (key.capitalize()).replace(' ','_'):value for key, value in imgs_dict.items()}
+    imgs_dict = { (key.capitalize()).replace(' ','_'):value for key, value in list(imgs_dict.items())}
     # capilatize image name, so it can be called later
     return imgs_dict
 
@@ -88,36 +88,35 @@ def mw_img_url(site, img): #find full of an img
 # PROCESSING MODULES
 
 def write_html_file(html_tree, filename):
-    doctype = "<!DOCTYPE HTML>"
-    html = doctype + ET.tostring(html_tree,  method='html', encoding='utf-8', ) 
-    edited = open(filename, 'w') #write
-    edited.write(html)
-    edited.close()
+    doctype = b"<!DOCTYPE HTML>"
+    html = ET.tostring(html_tree, method='html', encoding='utf-8')
+    with open(filename, 'wb') as edited:
+        edited.write(doctype + html)
 
 def parse_work(site, title, content):
-    workdict = {'Title':title, 'Creator':u'', 'Date':u'', 'Website':u'', 'Thumbnail':u'', 'Bio':u'', 'Description':u'', 'Extra':u''}    
+    workdict = {'Title': title, 'Creator': '', 'Date': '', 'Website': '', 'Thumbnail': '', 'Bio': '', 'Description': '', 'Extra': ''}
 
-    if re.match(u'\{\{\Graduation work', content):
-        template, extra = (re.findall(u'\{\{Graduation work\n(.*?)\}\}(.*)', content, re.DOTALL))[0]
+    if re.match(r'\{\{Graduation work', content):
+        template, extra = re.findall(r'\{\{Graduation work\n(.*?)\}\}(.*)', content, re.DOTALL)[0]
         if extra:
-            workdict['Extra'] = extra 
-        keyval = re.findall(u'\|(.*?)\=(.*?\n)', template, re.DOTALL) 
+            workdict['Extra'] = extra
+        keyval = re.findall(r'\|(.*?)\=(.*?\n)', template, re.DOTALL)
         for pair in keyval:
             key = pair[0]
-            val = (pair[1]).replace('\n', '')
+            val = pair[1].replace('\n', '')
             if 'Creator' in key:
-                val = val.replace(u', ', u'')
+                val = val.replace(', ', '')
             elif 'Thumbnail' in key:
-                val = mw_img_url(site, val)#api_thumb_url(val)
+                val = mw_img_url(site, val)  # Assuming mw_img_url is defined elsewhere
             elif 'Website' in key:
-                val = urllib.unquote( val)                
-            workdict[key]=val
+                val = urllib.parse.unquote(val)
+            workdict[key] = val
     return workdict
 
 def pandoc2html(mw_content):
     '''convert individual mw sections to html'''
     mw_content = mw_content.encode('utf-8')
-    tmpfile = open('./tmp_content.mw', 'w')
+    tmpfile = open('./tmp_content.mw', 'wb')
     tmpfile.write(mw_content)
     tmpfile.close()
     args_pandoc = shlex.split( 'pandoc -f mediawiki -t html5 tmp_content.mw' )
@@ -145,7 +144,7 @@ def find_authors(content):
 def remove_cats(content):
     content = re.sub(cat_exp, '', content)
     return content
-    print 'NO CATS', content
+    print('NO CATS', content)
 
 def replace_gallery(content):
     content = re.sub(imgfile_exp, '[[\g<1>]]', content) #add [[ ]] to File:.*?
@@ -157,7 +156,7 @@ vimeo_exp=re.compile('\{\{\#widget\:Vimeo\|id\=(.*?)\}\}')
 youtube_exp=re.compile('{\{\#widget\:YouTube\|id\=(.*?)\}\}')
 
 def replace_video(content):
-    print '*** VIDEO ***'
+    print('*** VIDEO ***')
     content = re.sub(vimeo_exp,"<iframe src='https://player.vimeo.com/video/\g<1>' width='600px' height='450px'> </iframe>", content)
     content = re.sub(youtube_exp, "<iframe src='https://www.youtube.com/embed/\g<1>' width='600px' height='450px'> </iframe>", content)
     content = re.sub(video_exp, "<video controls='controls' src='\g<1>' ></video>", content)
@@ -192,7 +191,7 @@ def index_addwork(parent, workid, href, thumbnail, title, creator, date):
                                                      'data-date':date})
 
     grandchild_a = ET.SubElement(child_div, 'a', attrib={'href':href, 'class':'work'})
-    if thumbnail is '':
+    if thumbnail == '':
         grandgrandchild_h3 = ET.SubElement(grandchild_a, 'h3', attrib={'class':'work', 'id':'thumbnail_replacement'})
         grandgrandchild_h3.text=title
     else:
