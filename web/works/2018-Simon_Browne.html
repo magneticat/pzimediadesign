@@ -15,7 +15,7 @@
             <div id="sidebarInner">
                 <div id="sideBarDesc">
                     <div id="sideBarDescInfo">
-                        <a href="javascript:history.back()" class="hoverBackA"><img class="template" src="../img/arrowBack.svg"></a><p><!--TITLE--></p>
+                        <a class="hoverBackA" href="javascript:history.back()"><img class="template" src="../img/arrowBack.svg"></a><p><!--TITLE--></p>
                     </div>
 
                     <div id="sideBarDescInner">
@@ -48,7 +48,7 @@
         <div class="zwartArea zwartAreaWhite sidebarBorderLeft" id="section02">
             <div class="fixedsticky" id="filter" style="top:0;">
               <div class="themes" id="sortArea">
-		<a href="javascript:history.back()" class="hoverBackB">
+		<a class="hoverBackB" href="javascript:history.back()">
 		  <img class="template" src="../img/arrowBack.svg">
 		</a>
 		<p>The bootleg library</p><!--{title}-->
@@ -58,22 +58,22 @@
                        
             <!-- extra -->
 
-            <div id="extra" class="project"><img id="thumbnail" src="https://pzwiki.wdka.nl/mw-mediadesign/images/4/42/Small_bootlegger.jpg">
+            <div class="project" id="extra"><img id="thumbnail" src="https://pzwiki.wdka.nl/mw-mediadesign/images/4/42/Small_bootlegger.jpg">
             <div><p>See: <span style="font-size: 200%;"><a href="https://hub.xpub.nl/bootleglibrary">hub.xpub.nl/bootleglibrary</a></span></p>
 <p>__TOC__</p>
 <p>small_bootlegger.jpg|250px|A prohibition-era bootlegger, concealing a flask of liquor in the leg of a boot Digital bl 01.jpg|The digital bootleg library, running on a homebrewed (self-hosted) server Bl varia 01.jpg|The printed bootleg library, set up at a bootleg library session at Varia (Rotterdam), February 2020 Bl kdh 04.jpg|The former champagne box that houses the printed bootleg library, a nomadic "mini-bieb" that travels to bootleg library sessions Bl sessions cards.jpeg|A6 invitations for bootleg library sessions BL Meeting Grounds 06.jpg|bootleg library session at Onomatopee (Eindhoven), March 2020</p>
 <h2 id="about-the-bootleg-library">About the bootleg library</h2>
 <p>The <a href="User:Simon/bootleg_library" title="wikilink"> bootleg library</a> is a physical/digital/social collection of unauthorised republished texts. It was initiated by <a href="User:Simon" title="wikilink">Simon Browne</a> while he was at XPUB in 2020. The digital library is now a (fairly) stable study resource for XPUB staff and students, containing many texts that have been freely shared amongst the interpersonal network extending from PZI's XPUB through to LB, and MFA, and guests at various <a href="User:Simon/bootleg_library_sessions" title="wikilink"> bootleg library sessions</a> at Varia, Onomatopee and AMRO (Art Meets Radical Openness) 2020.</p>
 <p>Self-hosted on a Raspberry Pi, the library runs on the open-source software <a href="https://github.com/janeczku/calibre-web">calibre-web</a>, and goes through <a href="HUB" title="wikilink"> HUB</a> over <a href="Tinc" title="wikilink"> tinc</a>.</p>
-<p>The guide below is a (fairly) simple HOWTO for the bootleg library, based on its initial energy and aspirations. It is in no way technically comprehensive. For a more thorough breakdown of calibre-web's technical setup, refer to its wiki: <a href="https://github.com/janeczku/calibre-web/wiki">https://github.com/janeczku/calibre-web/wiki</a></p>
+<p>The guide below is a (fairly) simple HOWTO for the bootleg library, based on its initial energy and aspirations. It is in no way technically comprehensive. For a more thorough breakdown of calibre-web's technical setup, refer to its wiki: <a class="uri" href="https://github.com/janeczku/calibre-web/wiki">https://github.com/janeczku/calibre-web/wiki</a></p>
 <p>At the time of writing this cheatsheet (October 2020), the collection is mostly media and art theory, feminism(s), technical manuals and literature. However, the bootleg library is inclusive of other fields of knowledge, and is not limited to academic texts. Files have been uploaded individually by readers who wish to share items that represent their interests, so the collection includes sound files (MP3) novels, comics, joke books, poetry, calendars, and so on. The bootleg library welcomes diverse interests and definitions of what is "knowledge".</p>
 <h2 id="the-basics">The basics</h2>
 <h3 id="initial-login">Initial login</h3>
 <figure>
-<img src="https://pzwiki.wdka.nl/mw-mediadesign/images/e/ef/Bl_http_login.png" title="bl_http_login.png" alt="bl_http_login.png" width="400"></figure>
+<img alt="bl_http_login.png" src="https://pzwiki.wdka.nl/mw-mediadesign/images/e/ef/Bl_http_login.png" title="bl_http_login.png" width="400"></figure>
 <p>On arrival at hub.xpub.nl/bootleglibrary, you will need to enter in an HTTP login to gain access to the bootleg library. If you don't know these details, send an email to the XPUB mailinglist.</p>
 <h2 id="the-interface-read-and-write">The interface: "read" and "write"</h2>
-<p><img src="digital_bl.png" title="fig:The digital bootleg library: &quot;read&quot; navigation on the left, &quot;write&quot; navigation at top right" alt="The digital bootleg library: &quot;read&quot; navigation on the left, &quot;write&quot; navigation at top right"> After entering in the correct HTTP login, you'll see the interface is divided into two general navigation zones. They're not labelled as such, but in general they are there for the functions of "read", or browse at the collection, and "write", or upload, login and edit texts that describe the collection.</p>
+<p><img alt="The digital bootleg library: &quot;read&quot; navigation on the left, &quot;write&quot; navigation at top right" src="digital_bl.png" title="fig:The digital bootleg library: &quot;read&quot; navigation on the left, &quot;write&quot; navigation at top right"> After entering in the correct HTTP login, you'll see the interface is divided into two general navigation zones. They're not labelled as such, but in general they are there for the functions of "read", or browse at the collection, and "write", or upload, login and edit texts that describe the collection.</p>
 <ul>
 <li>the "read" navigation on the left, a section where you can search or browse the collection</li>
 <li>the "write" navigation on the top right, which includes buttons for upload, login</li>
@@ -123,39 +123,39 @@
 <p>A lot of these details will begin to be auto-entered as you type so it doesn't take that long if you decide to write them yourself. Previous entries have been recorded (especially the Tags/Categories), so it's best to select from what is there to consolidate the catalogue.</p>
 <p><strong>Book title</strong></p>
 <p>Sometimes the title will be entered in automatically, other times it will be the name of the file. If this is the case, the title should be entered as it is in full, as it appears in the publication, e.g:</p>
-<p><code>A Voice and Nothing More</code></p>
-<p><code>The Tragedy of Radical Subjectivity: From "Radical Software" to Proprietary Subjects</code></p>
+<p><code>A</code> <code>Voice</code> <code>and</code> <code>Nothing</code> <code>More</code></p>
+<p><code>The</code> <code>Tragedy</code> <code>of</code> <code>Radical</code> <code>Subjectivity:</code> <code>From</code> <code>"Radical</code> <code>Software"</code> <code>to</code> <code>Proprietary</code> <code>Subjects</code></p>
 <p><strong>Author</strong></p>
 <p>The author is also sometimes listed automatically, however, often the order of first and last name is not suitable to the bootleg library, which requires that the first name, last name order be used so that the "Authors" list in the read navigation is compiled correctly, via an alphabetical index corresponding to author's last names.</p>
 <p>Authors should be entered with first name, then last, with commas separating multiple authors e.g:</p>
-<p><code>Karen Eliot, Alex Smith</code></p>
+<p><code>Karen</code> <code>Eliot,</code> <code>Alex</code> <code>Smith</code></p>
 <p>If the item is the work of editors, then these should be listed the following way:</p>
-<p><code>Karen Eliot (ed.), Alex Smith (ed.)</code></p>
+<p><code>Karen</code> <code>Eliot</code> <code>(ed.),</code> <code>Alex</code> <code>Smith</code> <code>(ed.)</code></p>
 <p><strong>Description</strong></p>
 <p>Whatever is entered here will be displayed in the item's description, making it an important field for readers to be able to get a quick idea of the contents. Something should always be entered here, but this is completely at your discretion. Be as subjective as possible - what does the item mean to you? For example, a technical book may be just a practical text to some, but for others perhaps something that might have a more meaningful significance.</p>
 <p>For example:</p>
-<p><code>It's a book about UNIX.</code></p>
+<p><code>It's</code> <code>a</code> <code>book</code> <code>about</code> <code>UNIX.</code></p>
 <p>vs</p>
-<p><code>It's a grimoire, full of charms to cast magic spells with</code></p>
+<p><code>It's</code> <code>a</code> <code>grimoire,</code> <code>full</code> <code>of</code> <code>charms</code> <code>to</code> <code>cast</code> <code>magic</code> <code>spells</code> <code>with</code></p>
 <p>If you're not sure where to begin, look at what others have written about the item.</p>
 <p><strong>Tags</strong></p>
 <p>Whatever is entered here will determine the list of "Categories" in the read navigation. Don't use the hash symbol (#), it is not necessary to create a tag, and using one here will only make the tag appear with a redundant # next to it. Tags should be entered in title case, separated by commas. For example:</p>
-<p><code>Art, Theory, Literature, Fiction</code></p>
+<p><code>Art,</code> <code>Theory,</code> <code>Literature,</code> <code>Fiction</code></p>
 <p>If the tag has several words, enter it in sentence case:</p>
-<p><code>Art theory, Comparative literature, Theory fiction</code></p>
+<p><code>Art</code> <code>theory,</code> <code>Comparative</code> <code>literature,</code> <code>Theory</code> <code>fiction</code></p>
 <p><strong>Publishing date</strong></p>
 <p>If the actual day and month of publication are unknown, enter the publishing date as the first of January in the year of publication, e.g:</p>
 <p><code>01/01/2005</code></p>
 <p><strong>Publisher</strong></p>
 <p>The publisher(s) should be listed. If there are several co-publishers, separate them with commas:</p>
-<p><code>Bell Press, Round Editions, Mayview Publishers</code></p>
+<p><code>Bell</code> <code>Press,</code> <code>Round</code> <code>Editions,</code> <code>Mayview</code> <code>Publishers</code></p>
 <h4 id="delete-a-file">Delete a file</h4>
 <p>To delete a file, go to edit its metadata by clicking the book, then the "edit metadata button"</p>
 <figure>
-<img src="https://pzwiki.wdka.nl/mw-mediadesign/images/e/e2/Bl_book_view.png" title="bl_book_view.png" alt="bl_book_view.png" width="300"></figure>
+<img alt="bl_book_view.png" src="https://pzwiki.wdka.nl/mw-mediadesign/images/e/e2/Bl_book_view.png" title="bl_book_view.png" width="300"></figure>
 <p>Then, click "delete". It may take a while for the book to be removed, be patient!</p>
 <figure>
-<img src="https://pzwiki.wdka.nl/mw-mediadesign/images/9/96/Bl_book_delete.png" title="bl_book_delete.png" alt="bl_book_delete.png" width="300"></figure>
+<img alt="bl_book_delete.png" src="https://pzwiki.wdka.nl/mw-mediadesign/images/9/96/Bl_book_delete.png" title="bl_book_delete.png" width="300"></figure>
 <h2 id="advanced-features">Advanced features</h2>
 <p>Registered users are able to edit public and private "shelves", which are useful ways to collectively and individually organise the collection. Public shelves are visible to all users (guests and registered users), but private shelves are visible only to the signed-in registered user. Guest users may download the entire contents of a shelf, but registered users get options to edit, delete and change the order of items in shelves.</p>
 <p>In order to create and edit shelves, first a registered user account must be made.</p>
@@ -168,24 +168,24 @@
 </ul>
 <h3 id="login-as-a-registered-user">Login as a registered user</h3>
 <figure>
-<img src="https://pzwiki.wdka.nl/mw-mediadesign/images/c/c3/Bl_guest_icon.png" title="bl_guest_icon.png" alt="bl_guest_icon.png" width="300"></figure>
+<img alt="bl_guest_icon.png" src="https://pzwiki.wdka.nl/mw-mediadesign/images/c/c3/Bl_guest_icon.png" title="bl_guest_icon.png" width="300"></figure>
 <p>To log in under a registered user account, click on the "Guest" icon in the write navigation. A new page will load, prompting you to enter your registered username and password:</p>
 <figure>
-<img src="https://pzwiki.wdka.nl/mw-mediadesign/images/f/f5/Bl_registered_user_login.png" title="bl_registered_user_login.png" alt="bl_registered_user_login.png" width="300"></figure>
+<img alt="bl_registered_user_login.png" src="https://pzwiki.wdka.nl/mw-mediadesign/images/f/f5/Bl_registered_user_login.png" title="bl_registered_user_login.png" width="300"></figure>
 <h3 id="create-a-shelf">Create a shelf</h3>
 <p>Once you are logged in under a registered user account, you can create a new shelf by clicking the "Create a Shelf" button at the bottom of the listed shelves in the read navigation:</p>
 <figure>
-<img src="https://pzwiki.wdka.nl/mw-mediadesign/images/7/78/Bl_create_a_shelf.png" title="bl_create_a_shelf.png" alt="bl_create_a_shelf.png" width="300"></figure>
+<img alt="bl_create_a_shelf.png" src="https://pzwiki.wdka.nl/mw-mediadesign/images/7/78/Bl_create_a_shelf.png" title="bl_create_a_shelf.png" width="300"></figure>
 <p>Shelves are private by default, If you would like to make your shelf public, click the checkbox after you name the shelf. This will make it editable by all registered users.</p>
 <figure>
-<img src="https://pzwiki.wdka.nl/mw-mediadesign/images/6/64/Bl_public_shelf.png" title="bl_public_shelf.png" alt="bl_public_shelf.png" width="300"></figure>
+<img alt="bl_public_shelf.png" src="https://pzwiki.wdka.nl/mw-mediadesign/images/6/64/Bl_public_shelf.png" title="bl_public_shelf.png" width="300"></figure>
 <h3 id="add-to-shelves">Add to shelves</h3>
 <p>Catalogue listings can appear on multiple shelves. Items are added to shelves in the "book details" preview that pops up when you click on a catalogue listing in the main overview. From a drop-down list of existing shelves you can choose where the listing should appear:</p>
 <figure>
-<img src="https://pzwiki.wdka.nl/mw-mediadesign/images/5/5f/Bl_add_book_to_shelf.png" title="bl_add_book_to_shelf.png" alt="bl_add_book_to_shelf.png" width="300"></figure>
+<img alt="bl_add_book_to_shelf.png" src="https://pzwiki.wdka.nl/mw-mediadesign/images/5/5f/Bl_add_book_to_shelf.png" title="bl_add_book_to_shelf.png" width="300"></figure>
 <p>To remove listing from a shelf, simply click the "x" in the boxes that show where it currently is shelved (removing a listing from a shelf does not remove it from the collection).</p>
 <figure>
-<img src="https://pzwiki.wdka.nl/mw-mediadesign/images/8/89/Bl_remove_book_from_shelf.png" title="bl_remove_book_from_shelf.png" alt="bl_remove_book_from_shelf.png" width="300"></figure>
+<img alt="bl_remove_book_from_shelf.png" src="https://pzwiki.wdka.nl/mw-mediadesign/images/8/89/Bl_remove_book_from_shelf.png" title="bl_remove_book_from_shelf.png" width="300"></figure>
 <h3 id="shelf-options">Shelf options</h3>
 <p>Clicking on a shelf brings up the options to</p>
 <ul>
@@ -195,14 +195,14 @@
 <li>Change order</li>
 </ul>
 <figure>
-<img src="https://pzwiki.wdka.nl/mw-mediadesign/images/c/c1/Bl_shelf_options.png" title="bl_shelf_options.png" alt="bl_shelf_options.png" width="300"></figure>
+<img alt="bl_shelf_options.png" src="https://pzwiki.wdka.nl/mw-mediadesign/images/c/c1/Bl_shelf_options.png" title="bl_shelf_options.png" width="300"></figure>
 <h3 id="annotate-the-collection">Annotate the collection</h3>
 <p>Various methods of annotating the collection already exist.</p>
 <ol>
 <li>Annotations made in the form of pasted links to pads in the book description:</li>
 </ol>
 <figure>
-<img src="https://pzwiki.wdka.nl/mw-mediadesign/images/3/3d/Bl_pad_annotations.png" title="Annotations made during Special Issue 10: LFP" alt="Annotations made during Special Issue 10: LFP" width="400"><figcaption>Annotations made during Special Issue 10: LFP</figcaption>
+<img alt="Annotations made during Special Issue 10: LFP" src="https://pzwiki.wdka.nl/mw-mediadesign/images/3/3d/Bl_pad_annotations.png" title="Annotations made during Special Issue 10: LFP" width="400"><figcaption>Annotations made during Special Issue 10: LFP</figcaption>
 </figure>
 <ol>
 <li>Annotations made in the form of EPUBs catalogued alongside PDFs in the bootleg library: <a href="User:Simon/bootleg_library_sessions#bootleg_library_at_Art_Meets_Radical_Openness_21.05.20" title="wikilink"> Notes on Texts</a></li>
